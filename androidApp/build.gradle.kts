@@ -33,5 +33,5 @@ android {
 }
 
 dependencies {
-    implementation(project(":app"))
+    implementation(projects.app)
 }

@@ -7,6 +7,7 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
+    @Suppress("UnstableApiUsage")
     repositories {
         google()
         mavenCentral()
@@ -18,3 +19,5 @@ rootProject.name = "AppTemplate"
 include(":androidApp")
 include(":desktopApp")
 include(":app")
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")

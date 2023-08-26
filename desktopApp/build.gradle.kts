@@ -43,7 +43,7 @@ compose {
 
 
 dependencies {
-    implementation(project(":app"))
+    implementation(projects.app)
 
     implementation(compose.desktop.currentOs)
     implementation(compose.material3)
