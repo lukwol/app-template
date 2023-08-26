@@ -1,10 +1,10 @@
 package io.github.lukwol.app.desktop
 
-import androidx.compose.ui.window.application
-import io.github.lukwol.app.MainWindow
+import androidx.compose.ui.window.singleWindowApplication
+import io.github.lukwol.app.AppLauncher
 
 fun main() {
-    application {
-        MainWindow()
+    singleWindowApplication {
+        AppLauncher()
     }
 }

@@ -46,7 +46,7 @@ dependencies {
     implementation(projects.app)
 
     implementation(compose.desktop.currentOs)
-    implementation(compose.material3)
+    implementation(compose.material)
     implementation(compose.uiTooling)
     implementation(compose.preview)
 }

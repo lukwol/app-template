@@ -39,20 +39,9 @@ kotlin {
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.ui)
-                implementation(compose.material3)
+                implementation(compose.material)
                 implementation(libs.navigation.screens)
                 implementation(libs.kotlin.serialization.json)
-            }
-        }
-
-        getByName("androidMain") {
-            dependencies {
-                implementation(libs.android.activity.compose)
-            }
-        }
-        getByName("jvmMain") {
-            dependencies {
-                implementation(compose.desktop.currentOs)
             }
         }
         getByName("commonTest") {

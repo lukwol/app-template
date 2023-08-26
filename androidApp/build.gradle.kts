@@ -13,6 +13,12 @@ android {
         versionCode = BuildConstants.VersionCode
         versionName = BuildConstants.VersionName
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -34,4 +40,11 @@ android {
 
 dependencies {
     implementation(projects.app)
+
+    implementation(libs.compose.android.activity)
+    implementation(libs.compose.android.material)
+    implementation(libs.compose.android.foundation)
+    implementation(libs.compose.android.ui)
+    implementation(libs.compose.android.preview)
+    implementation(libs.compose.android.ui.tooling)
 }

@@ -1,12 +1,9 @@
 [versions]
 kotlin = "1.9.0"
 compose = "1.4.3"
-serialization-json = "1.6.0"
+compose-compiler = "1.5.2"
 android = "8.1.1"
 navigation = "0.1.0"
-android-activity-compose = "1.7.2"
-dependency-updates = "0.47.0"
-kotlinter = "3.16.0"
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
@@ -16,11 +13,16 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" }
 android-application = { id = "com.android.application", version.ref = "android" }
 android-library = { id = "com.android.library", version.ref = "android" }
-kotlinter = { id = "org.jmailen.kotlinter", version.ref = "kotlinter" }
-dependency-updates = { id = "com.github.ben-manes.versions", version.ref = "dependency-updates" }
+kotlinter = { id = "org.jmailen.kotlinter", version = "3.16.0" }
+dependency-updates = { id = "com.github.ben-manes.versions", version = "0.47.0" }
 
 [libraries]
-kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization-json" }
+kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.6.0" }
 navigation-screens = { module = "io.github.lukwol:navigation-screens", version.ref = "navigation" }
-android-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "android-activity-compose" }
+compose-android-activity = { module = "androidx.activity:activity-compose", version = "1.7.2" }
+compose-android-material = { module = "androidx.compose.material:material", version.ref = "compose" }
+compose-android-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-android-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-android-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-android-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 

@@ -1,4 +1,4 @@
-package io.github.lukwol.app.desktop.preview
+package io.github.lukwol.app.android.preview
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
