@@ -37,7 +37,7 @@ kotlin {
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.ui)
-                implementation(compose.material)
+                implementation(compose.material3)
                 implementation(libs.navigation.screens)
                 implementation(libs.kotlin.serialization.json)
             }
