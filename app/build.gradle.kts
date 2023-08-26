@@ -9,7 +9,9 @@ plugins {
 kotlin {
     targetHierarchy.default()
 
-    android {
+    jvm()
+
+    androidTarget {
         compilations.all {
             kotlinOptions {
                 jvmTarget = BuildConstants.JvmTarget
@@ -42,9 +44,15 @@ kotlin {
                 implementation(libs.kotlin.serialization.json)
             }
         }
+
         getByName("androidMain") {
             dependencies {
                 implementation(libs.android.activity.compose)
+            }
+        }
+        getByName("jvmMain") {
+            dependencies {
+                implementation(compose.desktop.currentOs)
             }
         }
         getByName("commonTest") {

@@ -16,4 +16,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "AppTemplate"
 include(":androidApp")
+include(":desktopApp")
 include(":app")

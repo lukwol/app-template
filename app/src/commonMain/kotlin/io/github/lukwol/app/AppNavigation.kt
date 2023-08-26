@@ -1,9 +1,9 @@
 package io.github.lukwol.app
 
 import androidx.compose.runtime.Composable
-import io.github.lukwol.app.screens.FirstScreen
-import io.github.lukwol.app.screens.SecondScreen
-import io.github.lukwol.app.screens.ThirdScreen
+import io.github.lukwol.app.screen.FirstScreen
+import io.github.lukwol.app.screen.SecondScreen
+import io.github.lukwol.app.screen.ThirdScreen
 import io.github.lukwol.navigation.screens.ScreensNavigation
 
 @Composable

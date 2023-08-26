@@ -1,4 +1,4 @@
-package io.github.lukwol.app.screens
+package io.github.lukwol.app.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
