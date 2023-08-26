@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    namespace = "io.github.lukwol.app.android"
-    compileSdk = 33
+    namespace = "${BuildConstants.Group}.app.android"
+    compileSdk = BuildConstants.Android.CompileSdk
     defaultConfig {
-        applicationId = "io.github.lukwol.app.android"
-        minSdk = 29
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = BuildConstants.Android.ApplicationId
+        minSdk = BuildConstants.Android.MinSdk
+        targetSdk = BuildConstants.Android.TargetSdk
+        versionCode = BuildConstants.VersionCode
+        versionName = BuildConstants.VersionName
     }
     buildFeatures {
         compose = true
@@ -30,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = BuildConstants.JavaVersion
+        targetCompatibility = BuildConstants.JavaVersion
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = BuildConstants.JvmTarget
     }
 }
 

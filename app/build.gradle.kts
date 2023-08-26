@@ -10,7 +10,7 @@ kotlin {
     android {
         compilations.all {
             kotlinOptions {
-                jvmTarget = "1.8"
+                jvmTarget = BuildConstants.JvmTarget
             }
         }
     }
@@ -40,9 +40,14 @@ kotlin {
 }
 
 android {
-    namespace = "io.github.lukwol.app"
-    compileSdk = 33
+    namespace = "${BuildConstants.Group}.app"
+    compileSdk = BuildConstants.Android.CompileSdk
     defaultConfig {
-        minSdk = 29
+        minSdk = BuildConstants.Android.MinSdk
+    }
+
+    compileOptions {
+        sourceCompatibility = BuildConstants.JavaVersion
+        targetCompatibility = BuildConstants.JavaVersion
     }
 }
