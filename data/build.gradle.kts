@@ -26,12 +26,15 @@ kotlin {
         getByName("commonMain") {
             dependencies {
                 implementation(projects.domain)
+
+                implementation(libs.coroutines.core)
                 implementation(libs.kotlin.serialization.json)
                 implementation(libs.koin.core)
             }
         }
         getByName("commonTest") {
             dependencies {
+                implementation(libs.coroutines.test)
                 implementation(kotlin("test"))
             }
         }

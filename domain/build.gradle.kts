@@ -25,12 +25,14 @@ kotlin {
     sourceSets {
         getByName("commonMain") {
             dependencies {
+                implementation(libs.coroutines.core)
                 implementation(libs.kotlin.serialization.json)
                 implementation(libs.koin.core)
             }
         }
         getByName("commonTest") {
             dependencies {
+                implementation(libs.coroutines.test)
                 implementation(kotlin("test"))
             }
         }
