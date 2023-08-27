@@ -27,6 +27,7 @@ kotlin {
             dependencies {
                 implementation(projects.domain)
                 implementation(libs.kotlin.serialization.json)
+                implementation(libs.koin.core)
             }
         }
         getByName("commonTest") {

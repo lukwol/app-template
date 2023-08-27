@@ -33,7 +33,22 @@ kotlin {
                 implementation(compose.material)
                 implementation(libs.navigation.screens)
                 implementation(libs.kotlin.serialization.json)
+                implementation(libs.koin.core)
+                implementation(libs.koin.compose)
             }
+        }
+        getByName("androidMain") {
+            dependencies {
+                implementation(libs.koin.android)
+                implementation(libs.koin.android.compose)
+            }
+        }
+        create("nonAndroidMain") {
+            dependsOn(getByName("commonMain"))
+            getByName("jvmMain").dependsOn(this)
+            getByName("iosX64Main").dependsOn(this)
+            getByName("iosArm64Main").dependsOn(this)
+            getByName("iosSimulatorArm64Main").dependsOn(this)
         }
         getByName("commonTest") {
             dependencies {

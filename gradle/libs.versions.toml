@@ -3,7 +3,7 @@ kotlin = "1.9.0"
 compose = "1.4.3"
 compose-compiler = "1.5.2"
 android = "8.1.1"
-navigation = "0.1.0"
+koin = "3.4.3"
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
@@ -18,7 +18,11 @@ dependency-updates = { id = "com.github.ben-manes.versions", version = "0.47.0" 
 
 [libraries]
 kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.6.0" }
-navigation-screens = { module = "io.github.lukwol:navigation-screens", version.ref = "navigation" }
+navigation-screens = { module = "io.github.lukwol:navigation-screens-viewmodel", version = "0.1.0" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version = "1.0.4" }
 compose-android-activity = { module = "androidx.activity:activity-compose", version = "1.7.2" }
 compose-android-material = { module = "androidx.compose.material:material", version.ref = "compose" }
 compose-android-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }

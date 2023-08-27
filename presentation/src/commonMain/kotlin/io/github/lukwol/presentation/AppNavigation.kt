@@ -1,24 +1,44 @@
 package io.github.lukwol.presentation
 
 import androidx.compose.runtime.Composable
-import io.github.lukwol.navigation.screens.ScreensNavigation
-import io.github.lukwol.presentation.screen.FirstScreen
-import io.github.lukwol.presentation.screen.SecondScreen
-import io.github.lukwol.presentation.screen.ThirdScreen
+import io.github.lukwol.navigation.screens.viewmodel.ScreensNavigation
+import io.github.lukwol.presentation.screen.first.FirstScreen
+import io.github.lukwol.presentation.screen.first.FirstScreenViewModel
+import io.github.lukwol.presentation.screen.second.SecondScreen
+import io.github.lukwol.presentation.screen.second.SecondScreenViewModel
+import io.github.lukwol.presentation.screen.third.ThirdScreen
+import io.github.lukwol.presentation.screen.third.ThirdScreenViewModel
 
 @Composable
 fun AppNavigation() {
     ScreensNavigation(
         startRoute = AppRoutes.FirstScreenRoute,
     ) {
-        screen(AppRoutes.FirstScreenRoute) {
-            FirstScreen()
+        screen(
+            route = AppRoutes.FirstScreenRoute,
+            viewModelFactory = { koinViewModel<FirstScreenViewModel>() },
+        ) { viewModel ->
+            FirstScreen(viewModel)
         }
-        screen(AppRoutes.SecondScreenRoute) { args: String? ->
-            SecondScreen(args)
+        screen(
+            route = AppRoutes.SecondScreenRoute,
+            viewModelWithArgs = { args: String? ->
+                koinViewModel<SecondScreenViewModel>().apply {
+                    firstText = args.orEmpty().ifEmpty { "No text passed" }
+                }
+            },
+        ) { viewModel ->
+            SecondScreen(viewModel)
         }
-        screen(AppRoutes.ThirdScreenRoute) { args: List<String>? ->
-            ThirdScreen(args)
+        screen(
+            route = AppRoutes.ThirdScreenRoute,
+            viewModelWithArgs = { args: List<String>? ->
+                koinViewModel<ThirdScreenViewModel>().apply {
+                    texts = args.orEmpty()
+                }
+            },
+        ) { viewModel ->
+            ThirdScreen(viewModel)
         }
     }
 }

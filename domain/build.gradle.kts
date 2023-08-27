@@ -26,6 +26,7 @@ kotlin {
         getByName("commonMain") {
             dependencies {
                 implementation(libs.kotlin.serialization.json)
+                implementation(libs.koin.core)
             }
         }
         getByName("commonTest") {

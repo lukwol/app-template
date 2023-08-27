@@ -46,6 +46,7 @@ kotlin {
                 implementation(compose.material)
                 implementation(libs.navigation.screens)
                 implementation(libs.kotlin.serialization.json)
+                implementation(libs.koin.core)
             }
         }
         getByName("commonTest") {

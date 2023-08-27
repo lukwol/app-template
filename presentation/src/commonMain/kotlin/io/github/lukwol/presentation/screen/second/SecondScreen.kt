@@ -1,4 +1,4 @@
-package io.github.lukwol.presentation.screen
+package io.github.lukwol.presentation.screen.second
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,8 +10,6 @@ import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -20,30 +18,24 @@ import io.github.lukwol.navigation.screens.LocalScreensController
 import io.github.lukwol.presentation.AppRoutes
 
 @Composable
-fun SecondScreen(args: String?) {
+fun SecondScreen(viewModel: SecondScreenViewModel) {
     val screensController = LocalScreensController.current
-
-    val firstText = args
-        .orEmpty()
-        .ifEmpty { "No text passed" }
-
-    var secondText by remember { mutableStateOf("") }
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
         modifier = Modifier.fillMaxSize(),
     ) {
-        Text(firstText)
+        Text(viewModel.firstText)
 
         Spacer(Modifier.height(20.dp))
 
         TextField(
-            value = secondText,
+            value = viewModel.secondText,
             placeholder = {
                 Text("Type something else...")
             },
-            onValueChange = { secondText = it },
+            onValueChange = { viewModel.secondText = it },
         )
 
         Spacer(Modifier.height(20.dp))
@@ -62,7 +54,10 @@ fun SecondScreen(args: String?) {
             onClick = {
                 screensController.push(
                     route = AppRoutes.ThirdScreenRoute,
-                    args = listOf(firstText, secondText),
+                    args = listOf(
+                        viewModel.firstText,
+                        viewModel.secondText,
+                    ),
                 )
             },
         ) {
