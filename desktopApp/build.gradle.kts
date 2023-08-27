@@ -21,15 +21,15 @@ compose {
 
                 macOS {
                     jvmArgs("-Dapple.awt.application.appearance=system")
-                    iconFile.set(project.file("$resourcesPath/icon.icns"))
+//                    iconFile.set(project.file("$resourcesPath/icon.icns"))
                 }
 
                 windows {
-                    iconFile.set(project.file("$resourcesPath/icon.ico"))
+//                    iconFile.set(project.file("$resourcesPath/icon.ico"))
                 }
 
                 linux {
-                    iconFile.set(project.file("$resourcesPath/icon.png"))
+//                    iconFile.set(project.file("$resourcesPath/icon.png"))
                 }
             }
 
@@ -44,6 +44,7 @@ compose {
 
 dependencies {
     implementation(projects.app)
+    implementation(projects.presentation)
 
     implementation(compose.desktop.currentOs)
     implementation(compose.material)

@@ -1,10 +1,10 @@
-package io.github.lukwol.app
+package io.github.lukwol.presentation
 
 import androidx.compose.runtime.Composable
-import io.github.lukwol.app.screen.FirstScreen
-import io.github.lukwol.app.screen.SecondScreen
-import io.github.lukwol.app.screen.ThirdScreen
 import io.github.lukwol.navigation.screens.ScreensNavigation
+import io.github.lukwol.presentation.screen.FirstScreen
+import io.github.lukwol.presentation.screen.SecondScreen
+import io.github.lukwol.presentation.screen.ThirdScreen
 
 @Composable
 fun AppNavigation() {

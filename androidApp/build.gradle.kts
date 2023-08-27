@@ -40,6 +40,7 @@ android {
 
 dependencies {
     implementation(projects.app)
+    implementation(projects.presentation)
 
     implementation(libs.compose.android.activity)
     implementation(libs.compose.android.material)

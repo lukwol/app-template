@@ -1,4 +1,4 @@
-package io.github.lukwol.app
+package io.github.lukwol.presentation
 
 object AppRoutes {
     const val FirstScreenRoute = "first-screen"

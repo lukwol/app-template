@@ -1,4 +1,4 @@
-package io.github.lukwol.app.screen
+package io.github.lukwol.presentation.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,8 +16,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import io.github.lukwol.app.AppRoutes
 import io.github.lukwol.navigation.screens.LocalScreensController
+import io.github.lukwol.presentation.AppRoutes
 
 @Composable
 fun SecondScreen(args: String?) {
