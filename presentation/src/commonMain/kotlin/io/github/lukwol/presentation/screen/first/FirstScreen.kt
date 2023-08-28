@@ -13,7 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import io.github.lukwol.navigation.screens.LocalScreensController
-import io.github.lukwol.presentation.AppRoutes
+import io.github.lukwol.presentation.ScreenRoutes
 
 @Composable
 fun FirstScreen(viewModel: FirstScreenViewModel) {
@@ -36,7 +36,7 @@ fun FirstScreen(viewModel: FirstScreenViewModel) {
 
         Button(
             onClick = {
-                screensController.push(AppRoutes.SecondScreenRoute, viewModel.text)
+                screensController.push(ScreenRoutes.SecondScreenRoute, viewModel.text)
             },
         ) {
             Text("Go to second screen")

@@ -44,7 +44,7 @@ dependencies {
 
     implementation(libs.compose.android.activity)
     implementation(libs.compose.android.material)
-    implementation(libs.navigation.screens)
+    implementation(libs.navigation.screens.viewmodel)
     implementation(libs.compose.android.foundation)
     implementation(libs.compose.android.ui)
     implementation(libs.compose.android.preview)

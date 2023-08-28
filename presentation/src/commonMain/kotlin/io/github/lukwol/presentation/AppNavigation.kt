@@ -12,16 +12,16 @@ import io.github.lukwol.presentation.screen.third.ThirdScreenViewModel
 @Composable
 fun AppNavigation() {
     ScreensNavigation(
-        startRoute = AppRoutes.FirstScreenRoute,
+        startRoute = ScreenRoutes.FirstScreenRoute,
     ) {
         screen(
-            route = AppRoutes.FirstScreenRoute,
+            route = ScreenRoutes.FirstScreenRoute,
             viewModelFactory = { koinViewModel<FirstScreenViewModel>() },
         ) { viewModel ->
             FirstScreen(viewModel)
         }
         screen(
-            route = AppRoutes.SecondScreenRoute,
+            route = ScreenRoutes.SecondScreenRoute,
             viewModelWithArgs = { args: String? ->
                 koinViewModel<SecondScreenViewModel>().apply {
                     firstText = args.orEmpty().ifEmpty { "No text passed" }
@@ -31,7 +31,7 @@ fun AppNavigation() {
             SecondScreen(viewModel)
         }
         screen(
-            route = AppRoutes.ThirdScreenRoute,
+            route = ScreenRoutes.ThirdScreenRoute,
             viewModelWithArgs = { args: List<String>? ->
                 koinViewModel<ThirdScreenViewModel>().apply {
                     texts = args.orEmpty()

@@ -31,7 +31,7 @@ kotlin {
                 implementation(compose.runtime)
                 implementation(compose.ui)
                 implementation(compose.material)
-                implementation(libs.navigation.screens)
+                implementation(libs.navigation.screens.viewmodel)
                 implementation(libs.kotlin.serialization.json)
                 implementation(libs.koin.core)
                 implementation(libs.koin.compose)

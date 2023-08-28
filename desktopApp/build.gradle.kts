@@ -48,7 +48,8 @@ dependencies {
 
     implementation(compose.desktop.currentOs)
     implementation(compose.material)
-    implementation(libs.navigation.screens)
+    implementation(libs.navigation.screens.viewmodel)
+    implementation(libs.navigation.windows)
     implementation(compose.uiTooling)
     implementation(compose.preview)
 }

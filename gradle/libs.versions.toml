@@ -4,6 +4,7 @@ compose = "1.4.3"
 compose-compiler = "1.5.2"
 koin = "3.4.3"
 coroutines = "1.6.4"
+navigation = "0.1.0"
 android = "8.1.1"
 
 [plugins]
@@ -19,7 +20,8 @@ dependency-updates = { id = "com.github.ben-manes.versions", version = "0.47.0" 
 
 [libraries]
 kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.6.0" }
-navigation-screens = { module = "io.github.lukwol:navigation-screens-viewmodel", version = "0.1.0" }
+navigation-screens-viewmodel = { module = "io.github.lukwol:navigation-screens-viewmodel", version.ref = "navigation" }
+navigation-windows = { module = "io.github.lukwol:navigation-windows", version.ref = "navigation" }
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
 coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines" }
