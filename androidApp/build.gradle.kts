@@ -40,13 +40,12 @@ android {
 
 dependencies {
     implementation(projects.app)
-    implementation(projects.presentation)
 
-    implementation(libs.compose.android.activity)
-    implementation(libs.compose.android.material)
+    implementation(libs.compose.activity.android)
+    implementation(libs.compose.material.android)
     implementation(libs.navigation.screens.viewmodel)
-    implementation(libs.compose.android.foundation)
-    implementation(libs.compose.android.ui)
-    implementation(libs.compose.android.preview)
-    implementation(libs.compose.android.ui.tooling)
+    implementation(libs.compose.foundation.android)
+    implementation(libs.compose.ui.android)
+    implementation(libs.compose.preview.android)
+    implementation(libs.compose.ui.tooling.android)
 }

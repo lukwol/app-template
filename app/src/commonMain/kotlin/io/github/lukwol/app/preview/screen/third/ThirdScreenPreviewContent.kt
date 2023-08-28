@@ -1,14 +1,12 @@
-package io.github.lukwol.app.desktop.preview.screen
+package io.github.lukwol.app.preview.screen.third
 
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.runtime.Composable
-import io.github.lukwol.app.desktop.preview.PreviewEnvironment
+import io.github.lukwol.app.preview.PreviewEnvironment
 import io.github.lukwol.presentation.screen.third.ThirdScreen
 import io.github.lukwol.presentation.screen.third.ThirdScreenViewModel
 
-@Preview
 @Composable
-private fun ThirdScreenPreview() = PreviewEnvironment {
+fun ThirdScreenPreviewContent() = PreviewEnvironment {
     ThirdScreen(
         viewModel = ThirdScreenViewModel().apply { texts = listOf("Adam", "Anna") },
     )

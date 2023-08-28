@@ -44,7 +44,6 @@ compose {
 
 dependencies {
     implementation(projects.app)
-    implementation(projects.presentation)
 
     implementation(compose.desktop.currentOs)
     implementation(compose.material)

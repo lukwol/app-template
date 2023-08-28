@@ -49,6 +49,11 @@ kotlin {
                 implementation(libs.koin.core)
             }
         }
+        getByName("androidMain"){
+            dependencies {
+                implementation(libs.lifecycle.viewmodel.android)
+            }
+        }
         getByName("commonTest") {
             dependencies {
                 implementation(kotlin("test"))
