@@ -1,5 +1,6 @@
 package io.github.lukwol.presentation
 
+import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.runtime.Composable
 import io.github.lukwol.navigation.screens.viewmodel.ScreensNavigation
 import io.github.lukwol.presentation.screen.first.FirstScreen
@@ -13,6 +14,18 @@ import io.github.lukwol.presentation.screen.third.ThirdScreenViewModel
 fun AppNavigation() {
     ScreensNavigation(
         startRoute = ScreenRoutes.FirstScreenRoute,
+        enterTransition = {
+            slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left)
+        },
+        exitTransition = {
+            slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Left)
+        },
+        popEnterTransition = {
+            slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Right)
+        },
+        popExitTransition = {
+            slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right)
+        },
     ) {
         screen(
             route = ScreenRoutes.FirstScreenRoute,

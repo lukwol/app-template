@@ -8,13 +8,9 @@ object BuildConstants {
     val JavaVersion = VERSION_17
 
     object Android {
-        const val ApplicationId = "${BuildConstants.Group}.app.android"
+        const val ApplicationId = "$Group.app.android"
         const val MinSdk = 29
-        const val TargetSdk = 33
+        const val TargetSdk = 34
         const val CompileSdk = TargetSdk
-    }
-
-    object IOS {
-        const val DeploymentTarget = "15.2"
     }
 }

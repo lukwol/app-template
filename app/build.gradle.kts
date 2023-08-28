@@ -26,11 +26,6 @@ kotlin {
     ).forEach {
         it.binaries.framework {
             baseName = "app"
-            freeCompilerArgs += listOf(
-                "-linker-option", "-framework", "-linker-option", "Metal",
-                "-linker-option", "-framework", "-linker-option", "CoreText",
-                "-linker-option", "-framework", "-linker-option", "CoreGraphics",
-            )
         }
     }
 
