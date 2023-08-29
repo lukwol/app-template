@@ -5,8 +5,8 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
-@OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
+    @Suppress("OPT_IN_USAGE")
     targetHierarchy.default()
 
     jvm()
@@ -38,7 +38,7 @@ kotlin {
 
                 implementation(compose.runtime)
                 implementation(compose.ui)
-                implementation(compose.material)
+                implementation(compose.material3)
                 implementation(libs.navigation.screens.viewmodel)
                 implementation(libs.kotlin.serialization.json)
                 implementation(libs.koin.core)

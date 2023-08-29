@@ -42,7 +42,7 @@ dependencies {
     implementation(projects.app)
 
     implementation(libs.compose.activity.android)
-    implementation(libs.compose.material.android)
+    implementation(libs.compose.material3.android)
     implementation(libs.navigation.screens.viewmodel)
     implementation(libs.compose.foundation.android)
     implementation(libs.compose.ui.android)

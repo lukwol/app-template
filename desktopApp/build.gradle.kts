@@ -46,7 +46,7 @@ dependencies {
     implementation(projects.app)
 
     implementation(compose.desktop.currentOs)
-    implementation(compose.material)
+    implementation(compose.material3)
     implementation(libs.navigation.screens.viewmodel)
     implementation(libs.navigation.windows)
     implementation(compose.uiTooling)
