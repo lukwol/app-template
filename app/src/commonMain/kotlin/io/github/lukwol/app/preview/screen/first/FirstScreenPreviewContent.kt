@@ -8,6 +8,6 @@ import io.github.lukwol.presentation.screen.first.FirstScreenViewModel
 @Composable
 fun FirstScreenPreviewContent() = PreviewEnvironment {
     FirstScreen(
-        viewModel = FirstScreenViewModel(),
+        viewModel = FirstScreenViewModel().apply { text = "Mark" },
     )
 }

@@ -30,10 +30,12 @@ koin-compose = { module = "io.insert-koin:koin-compose", version = "1.0.4" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
 lifecycle-viewmodel-android = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.6.1" }
+test-runner-android = { module = "androidx.test:runner", version = "1.5.2" }
 compose-activity-android = { module = "androidx.activity:activity-compose", version = "1.7.2" }
 compose-material3-android = { module = "androidx.compose.material3:material3", version = "1.1.1" }
 compose-foundation-android = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-ui-android = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-preview-android = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-ui-tooling-android = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-test-manifest-android = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
 

@@ -28,8 +28,6 @@ kotlin {
             dependencies {
                 implementation(projects.domain)
 
-                implementation(compose.runtime)
-                implementation(compose.ui)
                 implementation(compose.material3)
                 implementation(libs.navigation.screens.viewmodel)
                 implementation(libs.kotlin.serialization.json)
@@ -45,16 +43,40 @@ kotlin {
         }
         create("nonAndroidMain") {
             dependsOn(getByName("commonMain"))
+            getByName("iosMain").dependsOn(this)
+        }
+        create("desktopMain") {
             getByName("jvmMain").dependsOn(this)
-            getByName("iosX64Main").dependsOn(this)
-            getByName("iosArm64Main").dependsOn(this)
-            getByName("iosSimulatorArm64Main").dependsOn(this)
+            dependsOn(getByName("nonAndroidMain"))
+        }
+        getByName("iosMain") {
+            dependsOn(getByName("nonAndroidMain"))
         }
         getByName("commonTest") {
             dependencies {
                 implementation(kotlin("test"))
             }
         }
+        create("composeUiTest") {
+            dependsOn(getByName("commonTest"))
+            dependencies {
+                implementation(compose.desktop.uiTestJUnit4)
+            }
+        }
+        getByName("androidInstrumentedTest") {
+            dependsOn(getByName("composeUiTest"))
+            dependencies {
+                implementation(libs.test.runner.android)
+            }
+        }
+        create("desktopTest") {
+            dependsOn(getByName("composeUiTest"))
+            getByName("jvmTest").dependsOn(this)
+            dependencies {
+                implementation(compose.desktop.currentOs)
+            }
+        }
+        getByName("iosTest")
     }
 }
 
@@ -63,10 +85,15 @@ android {
     compileSdk = BuildConstants.Android.CompileSdk
     defaultConfig {
         minSdk = BuildConstants.Android.MinSdk
+        testInstrumentationRunner = BuildConstants.Android.TestInstrumentationRunner
     }
 
     compileOptions {
         sourceCompatibility = BuildConstants.JavaVersion
         targetCompatibility = BuildConstants.JavaVersion
+    }
+
+    dependencies {
+        debugImplementation(libs.compose.ui.test.manifest.android)
     }
 }

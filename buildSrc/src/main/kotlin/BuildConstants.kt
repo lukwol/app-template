@@ -12,5 +12,7 @@ object BuildConstants {
         const val MinSdk = 29
         const val TargetSdk = 34
         const val CompileSdk = TargetSdk
+
+        const val TestInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 }
