@@ -1,7 +1,7 @@
 [versions]
-kotlin = "1.9.0"
-compose = "1.5.0"
-compose-compiler = "1.5.2"
+kotlin = "1.9.10"
+compose = "1.5.1"
+compose-compiler = "1.5.3"
 koin = "3.4.3"
 coroutines = "1.7.3"
 navigation = "1.0.0"
@@ -26,9 +26,9 @@ coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", ve
 coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
 coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
-koin-compose = { module = "io.insert-koin:koin-compose", version = "1.0.4" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
-koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version = "1.0.4" }
+koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version = "3.4.6" }
 lifecycle-viewmodel-android = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.6.1" }
 test-runner-android = { module = "androidx.test:runner", version = "1.5.2" }
 compose-activity-android = { module = "androidx.activity:activity-compose", version = "1.7.2" }
