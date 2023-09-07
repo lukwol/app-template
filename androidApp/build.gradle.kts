@@ -33,9 +33,6 @@ android {
         sourceCompatibility = BuildConstants.JavaVersion
         targetCompatibility = BuildConstants.JavaVersion
     }
-    kotlinOptions {
-        jvmTarget = BuildConstants.JvmTarget
-    }
 }
 
 dependencies {

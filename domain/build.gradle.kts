@@ -10,13 +10,7 @@ kotlin {
 
     jvm()
 
-    androidTarget {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = BuildConstants.JvmTarget
-            }
-        }
-    }
+    androidTarget()
 
     iosX64()
     iosArm64()

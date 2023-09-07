@@ -11,13 +11,7 @@ kotlin {
 
     jvm()
 
-    androidTarget {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = BuildConstants.JvmTarget
-            }
-        }
-    }
+    androidTarget()
 
     listOf(
         iosX64(),

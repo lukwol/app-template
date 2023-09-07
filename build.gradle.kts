@@ -24,17 +24,16 @@ allprojects {
     }
 
     tasks.withType<KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = BuildConstants.JvmTarget
-
+        compilerOptions {
             if (project.findProperty("enableComposeCompilerReports") == "true") {
-                val destinationDir =
-                    project.layout.buildDirectory.asFile.get().absolutePath + "/compose_metrics"
-                freeCompilerArgs += listOf(
-                    "-P",
-                    "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=$destinationDir",
-                    "-P",
-                    "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=$destinationDir"
+                val destinationDir = project.layout.buildDirectory.asFile.get().absolutePath + "/compose_metrics"
+                freeCompilerArgs.addAll(
+                    listOf(
+                        "-P",
+                        "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=$destinationDir",
+                        "-P",
+                        "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=$destinationDir"
+                    )
                 )
             }
         }
