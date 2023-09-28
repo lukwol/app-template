@@ -1,10 +1,10 @@
 [versions]
 kotlin = "1.9.10"
-compose = "1.5.1"
+compose = "1.5.2"
 compose-compiler = "1.5.3"
-koin = "3.4.3"
+koin = "3.5.0"
 coroutines = "1.7.3"
-navigation = "1.0.0"
+navigation = "1.1.0"
 android = "8.1.1"
 
 [plugins]
@@ -16,7 +16,7 @@ compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" 
 android-application = { id = "com.android.application", version.ref = "android" }
 android-library = { id = "com.android.library", version.ref = "android" }
 kotlinter = { id = "org.jmailen.kotlinter", version = "3.16.0" }
-dependency-updates = { id = "com.github.ben-manes.versions", version = "0.47.0" }
+dependency-updates = { id = "com.github.ben-manes.versions", version = "0.48.0" }
 
 [libraries]
 kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.6.0" }
@@ -27,9 +27,9 @@ coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", ve
 coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
-koin-compose = { module = "io.insert-koin:koin-compose", version = "1.0.4" }
-koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version = "3.4.6" }
-lifecycle-viewmodel-android = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.6.1" }
+koin-compose = { module = "io.insert-koin:koin-compose", version = "1.1.0" }
+koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+lifecycle-viewmodel-android = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version = "2.6.2" }
 test-runner-android = { module = "androidx.test:runner", version = "1.5.2" }
 compose-activity-android = { module = "androidx.activity:activity-compose", version = "1.7.2" }
 compose-material3-android = { module = "androidx.compose.material3:material3", version = "1.1.1" }

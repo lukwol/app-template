@@ -45,10 +45,11 @@ compose {
 dependencies {
     implementation(projects.app)
 
-    implementation(compose.desktop.currentOs)
-    implementation(compose.material3)
     implementation(libs.navigation.screens.viewmodel)
     implementation(libs.navigation.windows)
+    implementation(libs.koin.compose)
+    implementation(compose.desktop.currentOs)
+    implementation(compose.material3)
     implementation(compose.uiTooling)
     implementation(compose.preview)
 }

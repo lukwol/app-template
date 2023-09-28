@@ -4,6 +4,7 @@ import androidx.compose.ui.window.application
 import io.github.lukwol.app.App
 import io.github.lukwol.app.initialSetup
 import io.github.lukwol.navigation.windows.WindowsNavigation
+import org.koin.compose.KoinContext
 
 fun main() {
     initialSetup()
@@ -13,7 +14,9 @@ fun main() {
             startRoute = WindowRoutes.MainWindowRoute,
         ) {
             window(WindowRoutes.MainWindowRoute) {
-                App()
+                KoinContext {
+                    App()
+                }
             }
         }
     }
