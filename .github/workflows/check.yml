@@ -26,5 +26,8 @@ jobs:
       - name: Run instrumented unit tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 29
-          script: ./gradlew connectedCheck --build-cache
+          api-level: 33
+          target: google_apis
+          arch: x86_64
+          channel: canary
+          script: ./gradlew connectedCheck
