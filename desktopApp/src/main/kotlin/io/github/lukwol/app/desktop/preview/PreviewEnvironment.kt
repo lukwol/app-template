@@ -22,8 +22,6 @@ fun PreviewEnvironment(
             )
         },
     ) {
-        MaterialTheme {
-            content()
-        }
+        MaterialTheme(content = content)
     }
 }

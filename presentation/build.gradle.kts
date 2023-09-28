@@ -55,26 +55,6 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        create("composeUiTest") {
-            dependsOn(getByName("commonTest"))
-            dependencies {
-                implementation(compose.desktop.uiTestJUnit4)
-            }
-        }
-        getByName("androidInstrumentedTest") {
-            dependsOn(getByName("composeUiTest"))
-            dependencies {
-                implementation(libs.test.runner.android)
-            }
-        }
-        create("desktopTest") {
-            dependsOn(getByName("composeUiTest"))
-            getByName("jvmTest").dependsOn(this)
-            dependencies {
-                implementation(compose.desktop.currentOs)
-            }
-        }
-        getByName("iosTest")
     }
 }
 
@@ -83,15 +63,10 @@ android {
     compileSdk = BuildConstants.Android.CompileSdk
     defaultConfig {
         minSdk = BuildConstants.Android.MinSdk
-        testInstrumentationRunner = BuildConstants.Android.TestInstrumentationRunner
     }
 
     compileOptions {
         sourceCompatibility = BuildConstants.JavaVersion
         targetCompatibility = BuildConstants.JavaVersion
-    }
-
-    dependencies {
-        debugImplementation(libs.compose.ui.test.manifest.android)
     }
 }

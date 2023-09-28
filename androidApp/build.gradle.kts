@@ -12,6 +12,7 @@ android {
         targetSdk = BuildConstants.Android.TargetSdk
         versionCode = BuildConstants.VersionCode
         versionName = BuildConstants.VersionName
+        testInstrumentationRunner = BuildConstants.Android.TestInstrumentationRunner
     }
     buildFeatures {
         compose = true
@@ -47,4 +48,8 @@ dependencies {
     implementation(libs.compose.material3.android)
     implementation(libs.compose.preview.android)
     implementation(libs.compose.ui.tooling.android)
+
+    debugImplementation(libs.compose.ui.test.manifest.android)
+    androidTestImplementation(libs.test.runner.android)
+    androidTestImplementation(libs.compose.ui.test.junit4.android)
 }

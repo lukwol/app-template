@@ -32,11 +32,6 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        getByName("androidInstrumentedTest") {
-            dependencies {
-                implementation(libs.test.runner.android)
-            }
-        }
     }
 }
 
@@ -45,7 +40,6 @@ android {
     compileSdk = BuildConstants.Android.CompileSdk
     defaultConfig {
         minSdk = BuildConstants.Android.MinSdk
-        testInstrumentationRunner = BuildConstants.Android.TestInstrumentationRunner
     }
 
     compileOptions {

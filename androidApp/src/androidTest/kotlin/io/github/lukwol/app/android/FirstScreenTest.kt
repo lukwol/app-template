@@ -1,4 +1,4 @@
-package io.github.lukwol.presentation
+package io.github.lukwol.app.android
 
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.hasText

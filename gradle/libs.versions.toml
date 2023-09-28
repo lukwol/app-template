@@ -34,4 +34,5 @@ compose-material3-android = { module = "androidx.compose.material3:material3", v
 compose-preview-android = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-ui-tooling-android = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-test-manifest-android = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+compose-ui-test-junit4-android = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 

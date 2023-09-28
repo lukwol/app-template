@@ -54,4 +54,7 @@ dependencies {
     implementation(compose.material3)
     implementation(compose.uiTooling)
     implementation(compose.preview)
+
+    testImplementation(kotlin("test"))
+    testImplementation(compose.desktop.uiTestJUnit4)
 }
