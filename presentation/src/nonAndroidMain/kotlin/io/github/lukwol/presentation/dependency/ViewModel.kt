@@ -1,4 +1,4 @@
-package io.github.lukwol.presentation
+package io.github.lukwol.presentation.dependency
 
 import androidx.compose.runtime.Composable
 import io.github.lukwol.navigation.screens.viewmodel.ViewModel

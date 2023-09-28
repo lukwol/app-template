@@ -1,4 +1,4 @@
-package io.github.lukwol.presentation
+package io.github.lukwol.presentation.dependency
 
 import io.github.lukwol.presentation.screen.first.FirstScreenViewModel
 import io.github.lukwol.presentation.screen.second.SecondScreenViewModel

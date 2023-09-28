@@ -1,4 +1,4 @@
-package io.github.lukwol.domain
+package io.github.lukwol.domain.dependency
 
 import org.koin.dsl.module
 

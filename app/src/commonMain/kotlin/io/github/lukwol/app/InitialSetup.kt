@@ -1,8 +1,8 @@
 package io.github.lukwol.app
 
-import io.github.lukwol.data.DataModule
-import io.github.lukwol.domain.DomainModule
-import io.github.lukwol.presentation.PresentationModule
+import io.github.lukwol.data.dependency.DataModule
+import io.github.lukwol.domain.dependency.DomainModule
+import io.github.lukwol.presentation.dependency.PresentationModule
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 
