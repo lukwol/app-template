@@ -1,5 +1,5 @@
 import SwiftUI
-import app
+import launcher
 
 struct ComposeView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {

@@ -1,4 +1,4 @@
-package io.github.lukwol.app.desktop
+package io.github.lukwol.presentation.navigation
 
 object WindowRoutes {
     const val MainWindowRoute = "main-window"

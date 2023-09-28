@@ -43,7 +43,9 @@ compose {
 
 
 dependencies {
-    implementation(projects.app)
+    implementation(projects.data)
+    implementation(projects.domain)
+    implementation(projects.presentation)
 
     implementation(libs.navigation.screens.viewmodel)
     implementation(libs.navigation.windows)

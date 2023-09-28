@@ -12,7 +12,7 @@ import io.github.lukwol.presentation.screen.third.ThirdScreen
 import io.github.lukwol.presentation.screen.third.ThirdScreenViewModel
 
 @Composable
-fun AppNavigation() {
+fun AppScreensNavigation() {
     ScreensNavigation(
         startRoute = ScreenRoutes.FirstScreenRoute,
         enterTransition = {

@@ -36,15 +36,15 @@ android {
 }
 
 dependencies {
-    implementation(projects.app)
+    implementation(projects.data)
+    implementation(projects.domain)
+    implementation(projects.presentation)
 
     implementation(libs.navigation.screens.viewmodel)
     implementation(libs.koin.android)
     implementation(libs.koin.android.compose)
     implementation(libs.compose.activity.android)
     implementation(libs.compose.material3.android)
-    implementation(libs.compose.foundation.android)
-    implementation(libs.compose.ui.android)
     implementation(libs.compose.preview.android)
     implementation(libs.compose.ui.tooling.android)
 }

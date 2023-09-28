@@ -22,11 +22,11 @@ kotlin {
             dependencies {
                 implementation(projects.domain)
 
-                implementation(compose.material3)
                 implementation(libs.navigation.screens.viewmodel)
                 implementation(libs.kotlin.serialization.json)
                 implementation(libs.koin.core)
                 implementation(libs.koin.compose)
+                implementation(compose.material3)
             }
         }
         getByName("androidMain") {
@@ -42,12 +42,16 @@ kotlin {
         create("desktopMain") {
             getByName("jvmMain").dependsOn(this)
             dependsOn(getByName("nonAndroidMain"))
+            dependencies {
+                implementation(libs.navigation.windows)
+            }
         }
         getByName("iosMain") {
             dependsOn(getByName("nonAndroidMain"))
         }
         getByName("commonTest") {
             dependencies {
+                implementation(libs.coroutines.test)
                 implementation(kotlin("test"))
             }
         }

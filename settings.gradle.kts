@@ -18,7 +18,7 @@ dependencyResolutionManagement {
 rootProject.name = "app-template"
 include(":androidApp")
 include(":desktopApp")
-include(":app")
+include(":iosAppLauncher")
 include(":data")
 include(":domain")
 include(":presentation")

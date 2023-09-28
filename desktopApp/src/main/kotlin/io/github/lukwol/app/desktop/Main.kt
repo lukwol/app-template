@@ -1,22 +1,28 @@
 package io.github.lukwol.app.desktop
 
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.window.application
-import io.github.lukwol.app.App
-import io.github.lukwol.app.initialSetup
-import io.github.lukwol.navigation.windows.WindowsNavigation
-import org.koin.compose.KoinContext
+import io.github.lukwol.data.dependency.DataModule
+import io.github.lukwol.domain.dependency.DomainModule
+import io.github.lukwol.presentation.dependency.PresentationModule
+import io.github.lukwol.presentation.navigation.AppWindowsNavigation
+import org.koin.compose.KoinApplication
+import org.koin.core.logger.Level
 
 fun main() {
-    initialSetup()
-
     application {
-        WindowsNavigation(
-            startRoute = WindowRoutes.MainWindowRoute,
+        KoinApplication(
+            application = {
+                printLogger(Level.INFO)
+                modules(
+                    DataModule,
+                    DomainModule,
+                    PresentationModule,
+                )
+            },
         ) {
-            window(WindowRoutes.MainWindowRoute) {
-                KoinContext {
-                    App()
-                }
+            MaterialTheme {
+                AppWindowsNavigation()
             }
         }
     }
