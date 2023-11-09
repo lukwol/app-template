@@ -92,15 +92,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BEEE90D839E655F1B0647E58 /* xcuserdata */ = {
-			isa = PBXGroup;
-			children = (
-				BEEE9EDF924EB4F270D35981 /* lukwol.xcuserdatad */,
-			);
-			name = xcuserdata;
-			path = iosApp.xcodeproj/xcuserdata;
-			sourceTree = "<group>";
-		};
 		BEEE9184853E0FEE06F451C2 /* xcschemes */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,14 +113,6 @@
 			children = (
 			);
 			path = configuration;
-			sourceTree = "<group>";
-		};
-		BEEE9EDF924EB4F270D35981 /* lukwol.xcuserdatad */ = {
-			isa = PBXGroup;
-			children = (
-				BEEE9184853E0FEE06F451C2 /* xcschemes */,
-			);
-			path = lukwol.xcuserdatad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

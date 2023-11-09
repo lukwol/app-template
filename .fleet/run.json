@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Desktop App",
+            "type": "gradle",
+            "tasks": [
+                "desktopApp:run"
+            ]
+        },
+        {
+            "name": "iOS App",
+            "type": "xcode-app",
+            "buildTarget": {
+                "project": "iosApp",
+                "target": "iosApp",
+            },
+            "configuration": "Debug",
+            "destination": "iPhone 15 Pro | iOS 17.0",
+        },
+        {
+            "name": "Android App",
+            "type": "android-app",
+            "module": "app-template.androidApp.main",
+            "destination": "Pixel 7 API 34",
+        }
+    ]
+}
