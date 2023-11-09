@@ -42,14 +42,20 @@ dependencies {
     implementation(projects.presentation)
 
     implementation(libs.navigation.screens.viewmodel)
+
+    implementation(platform(libs.koin.bom.get()))
     implementation(libs.koin.android)
     implementation(libs.koin.android.compose)
+
+    implementation(platform(libs.compose.android.bom.get()))
     implementation(libs.compose.activity.android)
     implementation(libs.compose.material3.android)
     implementation(libs.compose.preview.android)
     implementation(libs.compose.ui.tooling.android)
 
     debugImplementation(libs.compose.ui.test.manifest.android)
+
+    androidTestImplementation(platform(libs.compose.android.bom.get()))
     androidTestImplementation(libs.test.runner.android)
     androidTestImplementation(libs.compose.ui.test.junit4.android)
 }

@@ -1,22 +1,20 @@
 [versions]
-kotlin = "1.9.10"
-compose = "1.5.3"
-compose-compiler = "1.5.3"
-koin = "3.5.0"
+kotlin = "1.9.20"
+compose-compiler = "1.5.4"
 coroutines = "1.7.3"
-navigation = "1.2.0"
-android = "8.1.2"
+navigation = "1.3.0"
+android-gradle-plugin = "8.1.3"
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" }
-android-application = { id = "com.android.application", version.ref = "android" }
-android-library = { id = "com.android.library", version.ref = "android" }
+compose-multiplatform = { id = "org.jetbrains.compose", version = "1.5.10" }
+android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
 kotlinter = { id = "org.jmailen.kotlinter", version = "3.16.0" }
-dependency-updates = { id = "com.github.ben-manes.versions", version = "0.48.0" }
+dependency-updates = { id = "com.github.ben-manes.versions", version = "0.49.0" }
 
 [libraries]
 kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.6.0" }
@@ -24,15 +22,16 @@ navigation-screens-viewmodel = { module = "io.github.lukwol:navigation-screens-v
 navigation-windows = { module = "io.github.lukwol:navigation-windows", version.ref = "navigation" }
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
-koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
-koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
-koin-compose = { module = "io.insert-koin:koin-compose", version = "1.1.0" }
-koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-bom = { module = "io.insert-koin:koin-bom", version = "3.5.1" }
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-android = { module = "io.insert-koin:koin-android" }
+koin-compose = { module = "io.insert-koin:koin-compose" }
+koin-android-compose = { module = "io.insert-koin:koin-androidx-compose" }
 test-runner-android = { module = "androidx.test:runner", version = "1.5.2" }
-compose-activity-android = { module = "androidx.activity:activity-compose", version = "1.8.0" }
-compose-material3-android = { module = "androidx.compose.material3:material3", version = "1.1.1" }
-compose-preview-android = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
-compose-ui-tooling-android = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
-compose-ui-test-manifest-android = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
-compose-ui-test-junit4-android = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
-
+compose-android-bom = { module = "androidx.compose:compose-bom", version = "2023.10.01" }
+compose-activity-android = { module = "androidx.activity:activity-compose" }
+compose-material3-android = { module = "androidx.compose.material3:material3" }
+compose-preview-android = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-ui-tooling-android = { module = "androidx.compose.ui:ui-tooling" }
+compose-ui-test-manifest-android = { module = "androidx.compose.ui:ui-test-manifest" }
+compose-ui-test-junit4-android = { module = "androidx.compose.ui:ui-test-junit4" }

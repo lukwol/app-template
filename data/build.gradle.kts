@@ -5,8 +5,7 @@ plugins {
 }
 
 kotlin {
-    @Suppress("OPT_IN_USAGE")
-    targetHierarchy.default()
+    applyDefaultHierarchyTemplate()
 
     jvm()
 
@@ -17,16 +16,17 @@ kotlin {
     iosSimulatorArm64()
 
     sourceSets {
-        getByName("commonMain") {
+        commonMain {
             dependencies {
                 implementation(projects.domain)
 
                 implementation(libs.coroutines.core)
                 implementation(libs.kotlin.serialization.json)
+                implementation(platform(libs.koin.bom.get()))
                 implementation(libs.koin.core)
             }
         }
-        getByName("commonTest") {
+        commonTest {
             dependencies {
                 implementation(libs.coroutines.test)
                 implementation(kotlin("test"))

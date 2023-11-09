@@ -49,7 +49,10 @@ dependencies {
 
     implementation(libs.navigation.screens.viewmodel)
     implementation(libs.navigation.windows)
+
+    implementation(platform(libs.koin.bom.get()))
     implementation(libs.koin.compose)
+
     implementation(compose.desktop.currentOs)
     implementation(compose.material3)
     implementation(compose.uiTooling)

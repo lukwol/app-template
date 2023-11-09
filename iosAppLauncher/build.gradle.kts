@@ -4,8 +4,7 @@ plugins {
 }
 
 kotlin {
-    @Suppress("OPT_IN_USAGE")
-    targetHierarchy.default()
+    applyDefaultHierarchyTemplate()
 
     listOf(
         iosX64(),
@@ -18,18 +17,19 @@ kotlin {
     }
 
     sourceSets {
-        getByName("iosMain") {
+        iosMain {
             dependencies {
                 implementation(projects.data)
                 implementation(projects.domain)
                 implementation(projects.presentation)
 
+                implementation(platform(libs.koin.bom.get()))
                 implementation(libs.koin.core)
                 implementation(libs.koin.compose)
                 implementation(compose.material3)
             }
         }
-        getByName("iosTest") {
+        iosTest {
             dependencies {
                 implementation(kotlin("test"))
             }

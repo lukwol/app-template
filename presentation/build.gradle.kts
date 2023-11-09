@@ -6,8 +6,7 @@ plugins {
 }
 
 kotlin {
-    @Suppress("OPT_IN_USAGE")
-    targetHierarchy.default()
+    applyDefaultHierarchyTemplate()
 
     jvm()
 
@@ -18,18 +17,21 @@ kotlin {
     iosSimulatorArm64()
 
     sourceSets {
-        getByName("commonMain") {
+        commonMain {
             dependencies {
                 implementation(projects.domain)
 
                 implementation(libs.navigation.screens.viewmodel)
                 implementation(libs.kotlin.serialization.json)
+
+                implementation(platform(libs.koin.bom.get()))
                 implementation(libs.koin.core)
                 implementation(libs.koin.compose)
+
                 implementation(compose.material3)
             }
         }
-        getByName("androidMain") {
+        androidMain {
             dependencies {
                 implementation(libs.koin.android)
                 implementation(libs.koin.android.compose)
@@ -46,10 +48,10 @@ kotlin {
                 implementation(libs.navigation.windows)
             }
         }
-        getByName("iosMain") {
+        iosMain {
             dependsOn(getByName("nonAndroidMain"))
         }
-        getByName("commonTest") {
+        commonTest {
             dependencies {
                 implementation(libs.coroutines.test)
                 implementation(kotlin("test"))
