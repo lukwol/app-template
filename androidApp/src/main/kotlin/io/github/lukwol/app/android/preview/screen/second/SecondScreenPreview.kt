@@ -9,9 +9,11 @@ import org.koin.androidx.compose.koinViewModel
 
 @Preview(showBackground = true)
 @Composable
-private fun SecondScreenPreview() = PreviewEnvironment {
-    SecondScreen(
-        viewModel = koinViewModel<SecondScreenViewModel>()
-            .apply { firstText = "Adam" },
-    )
-}
+private fun SecondScreenPreview() =
+    PreviewEnvironment {
+        SecondScreen(
+            viewModel =
+                koinViewModel<SecondScreenViewModel>()
+                    .apply { firstText = "Adam" },
+        )
+    }

@@ -14,15 +14,17 @@ import org.koin.core.scope.Scope
 actual inline fun <reified VM : ViewModel> koinViewModel(
     scope: Scope,
     noinline parameters: ParametersDefinition?,
-): VM = koinInject(
-    scope = scope,
-    parameters = parameters,
-)
+): VM =
+    koinInject(
+        scope = scope,
+        parameters = parameters,
+    )
 
 actual inline fun <reified R : ViewModel> Module.viewModelOf(
     crossinline constructor: () -> R,
     noinline options: DefinitionOptions<R>?,
-): KoinDefinition<R> = factoryOf(
-    constructor = constructor,
-    options = options,
-)
+): KoinDefinition<R> =
+    factoryOf(
+        constructor = constructor,
+        options = options,
+    )

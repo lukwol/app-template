@@ -9,9 +9,11 @@ import io.github.lukwol.presentation.screen.third.ThirdScreenViewModel
 
 @Preview
 @Composable
-private fun ThirdScreenPreview() = PreviewEnvironment {
-    ThirdScreen(
-        viewModel = koinViewModel<ThirdScreenViewModel>()
-            .apply { texts = listOf("Adam", "Anna") },
-    )
-}
+private fun ThirdScreenPreview() =
+    PreviewEnvironment {
+        ThirdScreen(
+            viewModel =
+                koinViewModel<ThirdScreenViewModel>()
+                    .apply { texts = listOf("Adam", "Anna") },
+        )
+    }

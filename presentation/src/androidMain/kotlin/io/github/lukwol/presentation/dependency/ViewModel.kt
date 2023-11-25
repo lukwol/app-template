@@ -14,15 +14,17 @@ import org.koin.androidx.viewmodel.dsl.viewModelOf as androidViewModelOf
 actual inline fun <reified VM : ViewModel> koinViewModel(
     scope: Scope,
     noinline parameters: ParametersDefinition?,
-): VM = androidKoinViewModel(
-    scope = scope,
-    parameters = parameters,
-)
+): VM =
+    androidKoinViewModel(
+        scope = scope,
+        parameters = parameters,
+    )
 
 actual inline fun <reified R : ViewModel> Module.viewModelOf(
     crossinline constructor: () -> R,
     noinline options: DefinitionOptions<R>?,
-): KoinDefinition<R> = androidViewModelOf(
-    constructor = constructor,
-    options = options,
-)
+): KoinDefinition<R> =
+    androidViewModelOf(
+        constructor = constructor,
+        options = options,
+    )

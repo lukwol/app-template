@@ -13,7 +13,6 @@ import org.junit.Rule
 import org.junit.Test
 
 class FirstScreenTest {
-
     @get:Rule
     val compose = createComposeRule()
 

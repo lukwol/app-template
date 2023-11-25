@@ -52,10 +52,11 @@ fun SecondScreen(viewModel: SecondScreenViewModel) {
             onClick = {
                 screensController.push(
                     route = ScreenRoutes.ThirdScreenRoute,
-                    args = listOf(
-                        viewModel.firstText,
-                        viewModel.secondText,
-                    ),
+                    args =
+                        listOf(
+                            viewModel.firstText,
+                            viewModel.secondText,
+                        ),
                 )
             },
         ) {

@@ -10,19 +10,20 @@ import org.koin.compose.KoinApplication
 import org.koin.core.logger.Level
 
 @Suppress("FunctionName", "unused")
-fun MainViewController() = ComposeUIViewController {
-    KoinApplication(
-        application = {
-            printLogger(Level.INFO)
-            modules(
-                DataModule,
-                DomainModule,
-                PresentationModule,
-            )
-        },
-    ) {
-        MaterialTheme {
-            AppScreensNavigation()
+fun MainViewController() =
+    ComposeUIViewController {
+        KoinApplication(
+            application = {
+                printLogger(Level.INFO)
+                modules(
+                    DataModule,
+                    DomainModule,
+                    PresentationModule,
+                )
+            },
+        ) {
+            MaterialTheme {
+                AppScreensNavigation()
+            }
         }
     }
-}

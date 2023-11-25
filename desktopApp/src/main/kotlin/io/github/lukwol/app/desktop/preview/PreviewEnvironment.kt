@@ -9,9 +9,7 @@ import org.koin.compose.KoinApplication
 import org.koin.core.logger.Level
 
 @Composable
-fun PreviewEnvironment(
-    content: @Composable () -> Unit,
-) {
+fun PreviewEnvironment(content: @Composable () -> Unit) {
     KoinApplication(
         application = {
             printLogger(Level.INFO)

@@ -9,9 +9,11 @@ import io.github.lukwol.presentation.screen.second.SecondScreenViewModel
 
 @Preview
 @Composable
-private fun SecondScreenPreview() = PreviewEnvironment {
-    SecondScreen(
-        viewModel = koinViewModel<SecondScreenViewModel>()
-            .apply { firstText = "Adam" },
-    )
-}
+private fun SecondScreenPreview() =
+    PreviewEnvironment {
+        SecondScreen(
+            viewModel =
+                koinViewModel<SecondScreenViewModel>()
+                    .apply { firstText = "Adam" },
+        )
+    }

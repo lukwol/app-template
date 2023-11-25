@@ -9,9 +9,11 @@ import org.koin.androidx.compose.koinViewModel
 
 @Preview(showBackground = true)
 @Composable
-private fun ThirdScreenPreview() = PreviewEnvironment {
-    ThirdScreen(
-        viewModel = koinViewModel<ThirdScreenViewModel>()
-            .apply { texts = listOf("Adam", "Anna") },
-    )
-}
+private fun ThirdScreenPreview() =
+    PreviewEnvironment {
+        ThirdScreen(
+            viewModel =
+                koinViewModel<ThirdScreenViewModel>()
+                    .apply { texts = listOf("Adam", "Anna") },
+        )
+    }

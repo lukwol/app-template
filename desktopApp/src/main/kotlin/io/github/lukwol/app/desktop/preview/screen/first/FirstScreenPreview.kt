@@ -9,9 +9,11 @@ import io.github.lukwol.presentation.screen.first.FirstScreenViewModel
 
 @Preview
 @Composable
-private fun FirstScreenPreview() = PreviewEnvironment {
-    FirstScreen(
-        viewModel = koinViewModel<FirstScreenViewModel>()
-            .apply { text = "Mark" },
-    )
-}
+private fun FirstScreenPreview() =
+    PreviewEnvironment {
+        FirstScreen(
+            viewModel =
+                koinViewModel<FirstScreenViewModel>()
+                    .apply { text = "Mark" },
+        )
+    }
